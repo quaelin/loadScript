@@ -1,19 +1,19 @@
 /*global console*/
 //
-// loadScript() is a global function for performing asynchronous script loads.
+// loadScript.js defines loadScript(), a global function for performing asynchronous
+// script loads.
 //
-// Features:
-//  - Tiny! (< 1K minified)
-//  - Supports .noConflict()
-//  - For developers, allows you to rewrite script URLs based on localStorage
-//    string substitution rules, making it easy to develop a new version of your
-//    JS products, even working off of a production site!
+// https://github.com/zynga/loadScript
+// Author: Chris Campbell (@quaelin)
+// License: BSD
 //
 (function (win, doc, undef) {
+	'use script';
+
 	var
 		loadScript,
 		funcName = 'loadScript',
-		VERSION = '0.1.4',
+		VERSION = '0.1.5',
 		had = Object.prototype.hasOwnProperty.call(win, funcName),
 		previous = win[funcName],
 		loading = {},
